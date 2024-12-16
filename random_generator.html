@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор цитат</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+        #quote {
+            font-size: 24px;
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Генератор случайных цитат</h1>
+    <div id="quote">Нажмите кнопку для получения цитаты!</div>
+    <button id="newQuoteButton">Новая цитата</button>
+
+    <script>
+        const quotes = [
+            "чем гуще лес шкебеде доп доп ес ес" ,
+"пудж момчег дагон ааааааааа" , " пи диди не виновен честно он мой кент" ,
+"я покакал" , " Денис Зефиров какашке хахахаахахахахахах" 
+
+= ]
+        const quoteDiv = document.getElementById('quote');
+        const newQuoteButton = document.getElementById('newQuoteButton');
+
+       
+        function generateRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteDiv.textContent = quotes[randomIndex];
+        }
+
+      
+        newQuoteButton.addEventListener('click', generateRandomQuote);
+
+        
+        generateRandomQuote();
+    </script>
+</body>
+</html>
